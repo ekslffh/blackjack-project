@@ -13,7 +13,7 @@ public class Dealer extends Gamer {
 	
 	/**
 	 * 생성자
-	 * deck : Card로부터 타입들 받아온다. (현재 13가지)
+	 * deck : Card로부터 타입들 받아온다. (현재 52가지)
 	 * cards, totalScore초기화
 	 */
 	public Dealer() {

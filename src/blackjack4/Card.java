@@ -60,8 +60,8 @@ public class Card {
 	 * @return 카드 타입에 따른 실제 값
 	 */
 	private int substitution(String type) {
-		if(type == "A") return 11;
-		else if(type == "J" || type == "Q" || type == "K") return 10;
+		if(type.equals("A")) return 11;
+		else if(type.equals("J") || type.equals("Q") || type.equals("K")) return 10;
 		else return Integer.parseInt(type);
 	}
 	
@@ -77,7 +77,7 @@ public class Card {
 	 */
 	@Override
 	public String toString() {
-		return (this.value + ";" + this.rank + "(" + this.suit + ")");
+		return (this.rank + "(" + this.suit + ")");
 	}
 	
 }

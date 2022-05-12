@@ -43,10 +43,15 @@ public abstract class Gamer {
 		return cards;
 	}
 	
+	/**
+	 * A값을 11->1로 변경한다.
+	 * totalScore에서 10을 빼준다.
+	 * @return 아직 11점으로 계산되는 A값이 있었으면 true 
+	 */
 	public boolean changedValueA() {
 		for(Card card : cards) {
 			if(card.getRank() == "A" && card.getValue() == 11) {
-				System.out.println("chaneged A (11 -> 1)");
+//				System.out.println("chaneged A (11 -> 1)");
 				card.setValue(1);
 				this.totalScore -= 10;
 				return true;

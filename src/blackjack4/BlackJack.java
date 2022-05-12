@@ -76,7 +76,10 @@ public class BlackJack {
 	 */
 	private void judge() {
 		dealer.addCard(hiddenCard);
-		if(player.getTotalScore() > 21) {
+		// player blackjack
+		if(player.getTotalScore() == 21) System.out.println("Player Wins...");
+		// player busted
+		else if(player.getTotalScore() > 21) {
 			System.out.println("Player busted...");
 		}
 		else {
@@ -86,9 +89,13 @@ public class BlackJack {
 					while(dealer.changedValueA() && dealer.isOver()) {}
 				}
 			}
-			if(dealer.getTotalScore() > 21) {
+			// dealer blackjack
+			if(dealer.getTotalScore() == 21) System.out.println("Dealer Wins...");
+			// dealer busted
+			else if(dealer.getTotalScore() > 21) {
 				System.out.println("Dealer busted...");
 			}
+			// 둘다 21 미만인 상태이므로 totalScore가 더 큰 쪽이 이긴다.
 			else {
 				if(player.getTotalScore() > dealer.getTotalScore()) System.out.println("Player Wins...");
 				else if(player.getTotalScore() < dealer.getTotalScore()) System.out.println("Dealer Wins...");

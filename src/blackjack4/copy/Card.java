@@ -77,7 +77,7 @@ public class Card {
 	 */
 	@Override
 	public String toString() {
-		return (this.value + ";" + this.rank + "(" + this.suit + ")");
+		return (this.rank + "(" + this.suit + ")");
 	}
 	
 }
