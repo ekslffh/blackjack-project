@@ -15,7 +15,7 @@ public class BlackJack {
 	private Dealer dealer;
 	private Player player;
 	private Card hiddenCard;
-	
+		
 	/**
 	 * dealer, player 인스턴스 생성 및 관계설정
 	 */
